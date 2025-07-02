@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Website Viewer</title>
+  </head>
+  <body>
+    <h1>Random Website Viewer</h1>
+    <button id="showSite">Show Random Site</button>
+    <iframe id="viewer" width="600" height="400"></iframe>
+    <script>
+      const sites = [
+        "https://example.com",
+        "https://wikipedia.org",
+        "https://openai.com"
+      ];
+      document.getElementById("showSite").onclick = function() {
+        const randomSite = sites[Math.floor(Math.random() * sites.length)];
+        document.getElementById("viewer").src = randomSite;
+      }
+    </script>
+  </body>
+</html>
